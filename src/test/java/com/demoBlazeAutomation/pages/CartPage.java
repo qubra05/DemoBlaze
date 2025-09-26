@@ -40,7 +40,6 @@ public class CartPage {
     @FindBy(id = "year")
     public WebElement yearInput;
 
-    //TODO: total amount web Element
     @FindBy(id = "totalp")
     public WebElement totalAmount;
 
@@ -122,8 +121,6 @@ public class CartPage {
     public boolean isProductInCart(String productName) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
 
-
-        //TODO extract xpath to find by
         List<WebElement> products = Driver.getDriver().findElements(
                 By.xpath("//tbody[@id='tbodyid']//tr/td[2]")
         );
